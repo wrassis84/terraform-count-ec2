@@ -11,7 +11,7 @@ variable "ec2_ami" {
 
 # Creating a Variable for region:
 variable "region" {
-  default = us-east-2
+  default = us-east-1
 }
 
 # Creating a Variable for instance_type:
