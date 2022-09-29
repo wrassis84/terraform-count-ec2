@@ -1,12 +1,7 @@
-# Creating a Variable for ami of type map:
-
+# Creating a Variable for ami:
 variable "ec2_ami" {
-  type = map(any)
-
-  default = {
-    us-east-2 = "ami-0416962131234133f"
-    us-west-1 = "ami-07ebfd5b3428b6f4d"
-  }
+  description = "AWS AMI to be used "
+  default = "ami-07ebfd5b3428b6f4d"
 }
 
 # Creating a Variable for region:
@@ -17,5 +12,11 @@ variable "region" {
 
 # Creating a Variable for instance_type:
 variable "instance_type" {
+  description = "Defines the hardware configuration of the machine"
   type = string
+}
+
+variable "env" {
+  description = "Environment of the Application"
+  default = "staging"
 }
