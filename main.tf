@@ -9,8 +9,8 @@ resource "aws_instance" "node" {
   tags = {
     # The count.index allows you to launch a resource.
     # Starting with the distinct index number 0 and corresponding to this instance.
-    Name        = "node-00${count.index}"
+    Name        = "tf-aws-node-00${count.index}"
     Environment = var.env
-    Provisioner = "Terraform"
+    Provisioner = "Hashicorp Terraform"
   }
 }
